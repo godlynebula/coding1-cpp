@@ -19,8 +19,8 @@ int main() {
     while (health > 0 && turns < 4) {               //I was not aware of this "&&" thing. I found it out as a mistake. this is the loop beginning
         turns += 1;                                  //this should increase turns by 1? hopefully.
 
-        attack = rand() % 4;                        //random number that is 4 or lower, hopefully
-        block = rand() % 4;
+        attack = rand() % 5;                        //random number that is 4 or lower, hopefully
+        block = rand() % 5;                         //initially had a value of 4 here, changed to 5 post submission
 
         cout << "As the snarling monster attacked, you blocked with honor.\n";
 
@@ -28,11 +28,11 @@ int main() {
             cout << "You held the nasty monster at bay! Keep up your courage!\n";
         }
         else {
-            health -= (attack - block);             //if b lock is less than attack, take damage
+            health -= (attack - block);             //if block is less than attack, take damage
             cout << "Oh no, the monster was too strong! You have lost " << (attack - block) << "health.\n";
         }
         if (health > 0) {       
-            char answer = 'n';
+            char answer = 'n';                      //could have used string input and then cin >> input here 
             cout << "Your health: " << health << ".\n";
             cout << "Are you sure that you want to continue in this engagement?\n";
             cin >> answer;
