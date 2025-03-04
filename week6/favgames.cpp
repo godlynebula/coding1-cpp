@@ -100,7 +100,7 @@ int main () {
                     break;
                 }
             }
-            if (i == gameCount) {
+            if (i + 1 == gameCount) {
                     cout << "Sorry, I could not find that game. Check your spelling and try again!\n";
             }
         }
@@ -124,7 +124,7 @@ int main () {
                     break;
                 }                                                                           
             }    
-            if (i == gameCount) {                                                                          
+            if (i + 1 == gameCount) {                                                                          
                     cout << "Sorry, I could not find that game. Check your spelling and try again!\n";
             }                                        
         }
@@ -149,3 +149,9 @@ int main () {
         }
     } while (true);
 }
+/* after class demonstration thoughts:
+so I made this a little more difficult than I should have. The remove function should have been a bit smaller and still would have worked the same.
+I did not know that I could use the same string input, as can be apparent from the, like, 5 different input strings with different names.
+this took me forever to do to be honest, did lots of searching for how to do some of these things. which is why it looks so crazy in some spots.
+this assignment does kind of help me understand how some of these functions work better, however, which is a good thing.
+*/
