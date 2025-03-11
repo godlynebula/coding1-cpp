@@ -48,10 +48,14 @@ int main () {
 
     cout << "I, the computer, am thinking of a number between 1 and 10.\nPlease, try to guess which number I am thinking of.\n";
     while (true) {
-
         if (debug) cout << "The number is " << theNumber << ".\n";
         getline (cin, input);
         int playerGuess = 0;
+
+        if (input == "quit") {
+            cout << "Fine, fine, I won't bother you anymore. Get outta here.\n";
+            break;
+        }
 
         try {
             playerGuess = stoi(input);
@@ -60,10 +64,6 @@ int main () {
             cout << "That's not a number. Try again!\n";
         }
 
-        if (input == "quit") {
-            cout << "Fine, fine, I won't bother you anymore. Get outta here.\n";
-            break;
-        }
         
         if (playerGuess == theNumber) {         //(stoi(input) == theNumber) {
             cout << "Wow, great, you guessed my number! Good job, congrats, yay.\n";
