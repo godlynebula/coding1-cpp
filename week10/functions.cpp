@@ -187,5 +187,11 @@ void show(string* array, int arraySize) {
  }
  
  bool adventure() {
-    if (askYesNo()) {}
+    if (askYesNo()) {
+        //do the adventure
+    }
+
+    else {
+        return false;
+    }
  } */
