@@ -20,8 +20,8 @@ using namespace std;
 
 class Human {
     string name;
-    int health = 10;
-    int damage = 4;
+    int health;
+    int damage;
 
 public:
 

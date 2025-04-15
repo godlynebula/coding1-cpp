@@ -11,10 +11,10 @@ enum enemyType {GRUNT, MINIBOSS, BOSS};
 // a custom variable type
 struct enemy {
     //these data members are public by default
-    int health = 10;
-    int damage = 4;
-    string name = "Enemy";
-    enemyType type = GRUNT;     // entering values in structs make them default
+    int health;
+    int damage;
+    string name;
+    enemyType type;     // entering values in structs make them default
 };
 
 struct address {
@@ -26,7 +26,7 @@ struct address {
 };
 
 struct employee {
-    int Id = 0;
+    int Id;
     string name;
     int age;
     //string address;

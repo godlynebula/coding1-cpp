@@ -14,9 +14,9 @@ private:
     //Data Members
     string name;
     string phrase;
-    int charge = 10;
-    int maxCharge = 100;
-    int minCharge = 0;
+    int charge;
+    int maxCharge;
+    int minCharge;
 
 public:
     // Member Functions
