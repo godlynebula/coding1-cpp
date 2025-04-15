@@ -25,28 +25,22 @@ class Human {
 
 public:
 
-    Human(string, int, int);
-    Human();
-    void SayHello();
+Human(string givenName, int givenHealth = 10, int baseDamage = 4) {
+    name = givenName;
+    health = givenHealth;
+    damage = baseDamage;
+}
+
+void SayHello() {
+    cout << "Hey, how's it going? My name is " << name << ".\n";
+}
     
     void SetHealth(int byAmount) {
-        if(byAmount < 0) {
-            health = 0;
-        } else if(byAmount > 100) {
-            health = 100;
-        } else {
             health = byAmount;
-        }
     }
 
     void SetDamage(int givenDamage) {
-        if(givenDamage < 0) {
-            damage = 0;
-        } else if(givenDamage > 10) {
-            damage = 10;
-        } else {
             damage = givenDamage;
-        }
     }
 
     int GetHealth() {
@@ -57,16 +51,6 @@ public:
         return damage;
     }
 };
-
-Human::Human(string givenName, int givenHealth, int baseDamage) {
-    name = givenName;
-    health = givenHealth;
-    damage = baseDamage;
-}
-
-void Human::SayHello() {
-    cout << "Hey, how's it going? My name is " << name << ".\n";
-}
 
 int main() {                        // not in the assignment, just thought I would check on the code
     Human anoki("Anoki", 10, 4);
