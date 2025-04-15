@@ -14,7 +14,9 @@ private:
     //Data Members
     string name;
     string phrase;
-    int charge = 10, maxCharge = 100, minCharge = 0;
+    int charge = 10;
+    int maxCharge = 100;
+    int minCharge = 0;
 
 public:
     // Member Functions
@@ -88,7 +90,7 @@ protected:
 
     void robot::SayHello() {
         cout << "My name is " << name << " and my charge is " << charge << ".\n";
-        cout << phrase << "/n";
+        cout << phrase << "\n";
         ChangeCharge();         // this task is not very expensive on our charge.
     }
 

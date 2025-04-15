@@ -46,7 +46,7 @@ protected:
 
     void robot::SayHello() {
         cout << "My name is " << name << " and my charge is " << charge << ".\n";
-        cout << phrase << "/n";
+        cout << phrase << "\n";
     }
 
 int main() {
