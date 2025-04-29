@@ -7,3 +7,4 @@ using namespace std;                                        // use ofstream for 
 void ReadFromFile();
 void WriteToFile();
 void WriteArrayToFile(string* arr, int size);
+void ReadFileIntoArray(string* arr, int sizeMax);

@@ -1,4 +1,5 @@
 #include "filemgmt.h"
+#include "itemm.h"
 
 void ReadFromFile() {
     // this string will hold what the file contains
@@ -40,4 +41,36 @@ void WriteArrayToFile(string* arr, int size) {
 
     // close the file and saves it to the disk
     file.close();
+}
+
+void ReadFileIntoArray(string* arr, int sizeMax) {
+    ifstream file("file.txt");          // ifstream, because we are reading a file
+    if (!file.is_open()) {
+        return;
+    }
+
+    string line;
+    int index = 0;
+    while (getline(file, line) && index < sizeMax) {
+        arr[index] = line;
+        index++;
+    }
+    file.close();
+}
+
+int main() {
+    itemm itemArray[5] = {
+        itemm("Large Shield", GREATHALL),
+        itemm("Curved Dagger", COURTYARD),
+        itemm("Potion of Tears", DUNGEON),
+        itemm("Map with Circled Locations", MARKET),
+        itemm("Small Lantern", INVENTORY)
+    };
+
+    for (int i = 0; i < 5; i++) {
+        itemArray[i].examine();
+        cout << "\n";
+    }
+
+    return 0;
 }

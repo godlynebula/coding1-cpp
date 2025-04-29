@@ -1,6 +1,7 @@
 // header files contain declarations
 // source files contain definitions
 #pragma once
+#include <string>
 #include <iostream>
 using namespace std;
 
@@ -20,10 +21,17 @@ using namespace std;
         a. submit a link to the assignment page with the folder in GitHub
 */
 
+// in C++, the first enum value is 0, and then it counts up
+enum location {GREATHALL, DUNGEON, COURTYARD, MARKET, INVENTORY};
+
 class itemm
 {
 private:
-    location location;
+    string name;
+    location loc;
 public:
     itemm();                // constructor 
+    itemm(string itemName, location itemLocation);
+    void use();
+    void examine();
 };
